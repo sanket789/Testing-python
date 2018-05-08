@@ -23,7 +23,5 @@ class TestLatLon(unittest.TestCase):
 		self.assertAlmostEqual(fr.latlon(radius*x1)[0],fr.latlon(x1)[0])
 		self.assertAlmostEqual(fr.latlon(radius*x1)[1],fr.latlon(x1)[1])
 
-@ddt
-
 if __name__=='__main__':
 	unittest.main(verbosity=2)
