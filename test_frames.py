@@ -29,7 +29,7 @@ class TestLatLon(unittest.TestCase):
 <<<<<<< HEAD
 		
 =======
-		x1 = np.array([1.,2.,-03.0])
+		x1 = np.array([1.00,2.00,-03.0])
 >>>>>>> 77c0c1f8ffcad4c44b8c4b2bc64914e1ba2279d9
 		self.assertAlmostEqual(fr.latlon(radius*x1)[0],fr.latlon(x1)[0])
 		self.assertAlmostEqual(fr.latlon(radius*x1)[1],fr.latlon(x1)[1])
