@@ -12,14 +12,14 @@ class TestLatLon(unittest.TestCase):
 		result = fr.latlon(given)
 		self.assertTrue(np.allclose([result[0],result[1]],expected))	
 		self.assertEqual(type(result),tuple)
-	@data(1,2,3,4,5,6)
+	@data(1,2,3,4,6,-6.8,1.1)
 	def test_z_symmetry_lat(self,value):
 		#self.assertEqual(2,2)
 		x1 = np.array([sin(value),cos(value),13.])
 		self.assertAlmostEqual(fr.latlon(x1)[0],fr.latlon(np.array([1.,0.,13.]))[0])
 	@data(7e3,7.1e3,7.2e3,7.3e3,7.4e3)
 	def test_independnt_of_radius(self,radius):
-		x1 = np.array([1.,2.,-3.])
+		x1 = np.array([1.,2.,-03.0])
 		self.assertAlmostEqual(fr.latlon(radius*x1)[0],fr.latlon(x1)[0])
 		self.assertAlmostEqual(fr.latlon(radius*x1)[1],fr.latlon(x1)[1])
 
